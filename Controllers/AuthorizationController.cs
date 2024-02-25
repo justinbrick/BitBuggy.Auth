@@ -1,16 +1,15 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using IdentityModel.Client;
 namespace BitBuggy.Auth.Controllers;
 
-
-[Route("auth")]
+[Route("oauth2")]
 [ApiController]
 public class AuthorizationController : ControllerBase
 {
-    [HttpGet("status")]
-    public IActionResult Get()
+    [HttpPost("token")]
+    public IActionResult PostTokenRequest(TokenRequest request)
     {
-        return Ok("Good to go!");
+        return Ok();
     }
 }
