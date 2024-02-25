@@ -17,7 +17,7 @@ public class ApplicationClient
     {
         const string identifier = "bbg";
         string secretString = RandomNumberGenerator.GetHexString(1024 / 32);
-        return $"{identifier}{secretString}";
+        return $"{identifier}-{secretString}";
     }
     public static string HashApplicationSecret(string applicationSecret)
     {
